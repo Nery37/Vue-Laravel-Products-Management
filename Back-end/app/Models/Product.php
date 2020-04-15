@@ -29,12 +29,9 @@ class Product extends Model
 
 
     public $fillable = [
-        'license',
-        'support',
-        'technology',
-        'tickets',
-        'sales',
-        'earnings'
+        'name_product',
+        'quantity',
+        'price_unit'
     ];
 
     /**
@@ -44,12 +41,9 @@ class Product extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'license' => 'string',
-        'support' => 'string',
-        'technology' => 'string',
-        'tickets' => 'float',
-        'sales' => 'integer',
-        'earnings' => 'float'
+        'name_product' => 'string',
+        'quantity' => 'integer',
+        'price_unit' => 'float'
     ];
 
     /**
@@ -58,12 +52,9 @@ class Product extends Model
      * @var array
      */
     public static $rules = [
-        'license' => 'required',
-        'support' => 'required',
-        'technology' => 'required',
-        'tickets' => 'required',
-        'sales' => 'required',
-        'earnings' => 'required'
+        'name_product' => 'required',
+        'quantity' => 'required',
+        'price_unit' => 'required'
     ];
 
     

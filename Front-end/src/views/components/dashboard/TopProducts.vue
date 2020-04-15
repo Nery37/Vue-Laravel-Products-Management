@@ -3,12 +3,10 @@
 <table class="table v-middle border">
     <thead>
         <tr class="">
-            <th class="border-top-0">Licença</th>
-            <th class="border-top-0">Suporte</th>
-            <th class="border-top-0">Tecnologia</th>
-            <th class="border-top-0">Tickets</th>
-            <th class="border-top-0">Vendas</th>
-            <th class="border-top-0">Ganhos</th>
+            <th class="border-top-0">Código</th>
+            <th class="border-top-0">Nome</th>
+            <th class="border-top-0">Quantidade</th>
+            <th class="border-top-0">Preço Unitário</th>
             <th class="border-top-0">Ações</th>
             
         </tr>
@@ -16,15 +14,11 @@
     <tbody>
         <template v-for="produto in $store.state.products" >
         <tr v-for="prod in produto" :key="prod.id">
-            <td>{{prod.license}}</td>
-            <td>{{prod.support}}</td>
+            <td>{{prod.id}}</td>
+            <td>{{prod.name_product}}</td>
+            <td>{{prod.quantity}}</td>
             <td>
-                <label class="label label-danger">{{prod.technology}}</label>
-            </td>
-            <td>{{prod.tickets}}</td>
-            <td>{{prod.sales}}</td>
-            <td>
-                <h5 class="m-b-0">R$ {{formatPrice(prod.earnings)}}</h5>
+                <h5 class="m-b-0">R$ {{formatPrice(prod.price_unit)}}</h5>
             </td>
             <td>
                 <div class="row">

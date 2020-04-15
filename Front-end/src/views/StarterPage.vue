@@ -20,63 +20,35 @@
 	<b-form @submit="onSubmit" @reset="onReset">
       <b-form-group
         id="input-group-1"
-        label="Licença:"
+        label="Nome:"
         label-for="input-1"
       >
       <input class="form-control-modify"
           id="input-1"
-          v-model="form.license"
+          v-model="form.name_product"
           required
-          placeholder="Digite sua licença"
+          placeholder="Digite o nome do produto"
         >
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Suporte:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Quantidade:" label-for="input-2">
         <input class="form-control-modify"
           id="input-2"
-          v-model="form.support"
-          required
-          placeholder="Digite seu suporte"
-        >
-      </b-form-group>
-
-      <b-form-group id="input-group-3" label="Tecnologia:" label-for="input-3">
-        <input class="form-control-modify"
-          id="input-3"
-          v-model="form.technology"
-          required
-          placeholder="Digite sua tecnologia"
-        >
-      </b-form-group>
-
-      <b-form-group id="input-group-4" label="Tickets:" label-for="input-4">
-        <input class="form-control-modify"
-          id="input-4"
           type="number"
-          v-model="form.tickets"
+          v-model="form.quantity"
           required
-          placeholder="Digite seus tickets"
+          placeholder="Digite a quantidade"
         >
       </b-form-group>
 
-      <b-form-group id="input-group-5" label="Vendas:" label-for="input-5">
-        <input class="form-control-modify"
-          id="input-5"
-          type="number"
-          v-model="form.sales"
-          required
-          placeholder="Digite suas vendas"
-        >
-      </b-form-group>
-
-      <b-form-group id="input-group-6" label="Ganhos:" label-for="input-6">
+      <b-form-group id="input-group-3" label="Preço Unitário:" label-for="input-3">
         <money 
         class="form-control-modify"
-        id="input-6"
-        v-model="form.earnings" 
+        id="input-3"
+        v-model="form.price_unit" 
         v-bind="money"
         required
-        placeholder="Digite seu ganhos"></money>
+        placeholder="Digite o preço unitário"></money>
       </b-form-group>
 
       <b-button type="submit" variant="primary" size="lg" style="float: right; margin-top: 30px">Confirmar</b-button>
@@ -112,12 +84,9 @@ export default {
             masked: false
         },
         	form: {
-          		license: '',
-          		support: '',
-          		technology	: '',
-              tickets: '',
-              sales: '',
-              earnings: ''
+          		name_product: '',
+          		quantity: '',
+          		price_unit	: ''
         	}
       }
     },
@@ -147,12 +116,9 @@ export default {
 			},
 		onReset() {
         this.id = null
-        this.form.license = ''
-        this.form.support = ''
-        this.form.technology =  ''
-        this.form.tickets = ''
-        this.form.sales = ''
-        this.form.earnings = ''
+        this.form.name_product = ''
+        this.form.quantity = ''
+        this.form.price_unit =  ''
       },
         obterUsuarios(){
         this.$http.get('products').then(resp =>{

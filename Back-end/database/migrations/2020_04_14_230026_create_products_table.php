@@ -15,12 +15,9 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('license');
-            $table->string('support');
-            $table->string('technology');
-            $table->integer('tickets');
-            $table->integer('sales');
-            $table->float('earnings');
+            $table->string('name_product');
+            $table->integer('quantity');
+            $table->float('price_unit');
             $table->timestamps();
             $table->softDeletes();
         });
