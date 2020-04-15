@@ -24,6 +24,6 @@ npm run serve
 
 ## Meta
 
-Vinicius Nery – [@Vinicius Nery](https://www.linkedin.com/in/marcos-nery-a3012/) – Viniciusneryb13@hotmail.com
+Vinicius Nery – [@Linkedin](https://www.linkedin.com/in/marcos-nery-a3012/) – Viniciusneryb13@hotmail.com
 
 [https://github.com/Nery37](https://github.com/Nery37)
