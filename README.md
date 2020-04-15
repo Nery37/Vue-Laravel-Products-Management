@@ -1,3 +1,3 @@
 # Products Managment
 
-!(amostragem.gif)
+<img src="amostragem.gif" width="40" height="40" />
