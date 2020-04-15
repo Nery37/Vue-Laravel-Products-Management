@@ -12,7 +12,7 @@ Na pasta Back-end execute os seguintes comandos. (Configure o seu .env antes (ph
 ```sh
 composer install
 composer update
-php artisan migrate
+php artisan migrate --seed
 php artisan serve
 ```
 
