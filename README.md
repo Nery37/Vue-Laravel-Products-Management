@@ -1,3 +1,3 @@
 # Products Managment
 
-!(demo.gif)
+!(amostragem.gif)
